@@ -1,12 +1,11 @@
-lst = []
-n = int(input("Enter the number of elements"))
-for i in range(n):
-    ele = int(input())
-    lst.append(ele)
-def check_even(arg1):
-    for num in arg1:
+def check_even(lst):
+    inpt2 =[]
+    for num in lst:
         if num%2==0:
-            inpt2 = num
-        print(inpt2)
+            inpt2.append(num)
     return inpt2
-print("the list is ",check_even(lst))
+lst = input("Enter the list of integers including comma")
+lst= lst.split(',')
+lst = [int(num) for num in lst]
+numbers= check_even(lst)
+print("Even numbers are",numbers)
